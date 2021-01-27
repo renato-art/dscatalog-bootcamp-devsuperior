@@ -1,26 +1,14 @@
-import React, {useState, useEffect} from 'react';
+import './core/assets/styles/custom.scss';
+import './App.scss'
+import React from 'react';
+import Navbar from './core/components/Navbar';
 
 const App = () => {
-    const [counter, setCounter] = useState(0);
-
-    useEffect(() => {
-        console.log('Componente iniciado')
-    })
 
     return (
-        <div className="container mt-5">
-            <button className="btn btn-primary mr-5" onClick={() => setCounter(counter + 1)}>
-                +
-            </button>
-            <span>
-                {counter}
-            </span>
-            <button className="btn btn-primary ml-5" onClick={() => setCounter(counter - 1)}>
-                -
-            </button>
-            {counter > 5 && <h1>O valor é maior que 5</h1>}
-        </div>
+        <Navbar />
     );
+    
 }
 
 export default App;
